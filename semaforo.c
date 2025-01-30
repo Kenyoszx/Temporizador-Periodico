@@ -41,7 +41,7 @@ void init_pins()
 
     gpio_init(LED_PIN_RED);
     gpio_set_dir(LED_PIN_RED, GPIO_OUT);
-    gpio_put(LED_PIN_RED, 0);
+    gpio_put(LED_PIN_RED, 1);
 }
 bool repeating_timer_callback(struct repeating_timer *t)
 {
