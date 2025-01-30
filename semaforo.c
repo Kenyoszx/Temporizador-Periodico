@@ -49,7 +49,12 @@ bool repeating_timer_callback(struct repeating_timer *t)
     return true;
 }
 uint8_t actual_state(){
-
+    if (gpio_get(LED_PIN_RED))
+        return LED_PIN_RED;
+    if (gpio_get(LED_PIN_BLUE))
+        return LED_PIN_BLUE;
+    if (gpio_get(LED_PIN_GREEN))
+        return LED_PIN_GREEN;
 }
 void next_state(){
     state = actual_state();
