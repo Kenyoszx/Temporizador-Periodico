@@ -4,10 +4,14 @@
 
 void init_pins();
 bool repeating_timer_callback(struct repeating_timer *);
+uint8_t actual_state();
+void next_state();
 
 #define LED_PIN_GREEN 11
 #define LED_PIN_BLUE 12
 #define LED_PIN_RED 13
+
+uint8_t state = LED_PIN_RED;
 
 int main()
 {
@@ -41,6 +45,31 @@ void init_pins()
 }
 bool repeating_timer_callback(struct repeating_timer *t)
 {
-    
+    next_state();
     return true;
+}
+uint8_t actual_state(){
+
+}
+void next_state(){
+    state = actual_state();
+    switch (state)
+    {
+    case LED_PIN_RED:
+        gpio_put(LED_PIN_RED,0);
+        gpio_put(LED_PIN_BLUE,1);
+        break;
+    case LED_PIN_BLUE:
+        gpio_put(LED_PIN_BLUE,0);
+        gpio_put(LED_PIN_GREEN,1);
+        break;
+    case LED_PIN_GREEN:
+        gpio_put(LED_PIN_GREEN,0);
+        gpio_put(LED_PIN_RED,1);
+        break;
+    default:
+        printf("[ERRO]");
+        break;
+    }
+    
 }
