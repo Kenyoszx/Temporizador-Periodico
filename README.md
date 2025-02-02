@@ -22,7 +22,7 @@ O código implementa o algoritmo que representa um semáforo que muda de estado 
 
 ## Configuração do Ambiente
 
-Antes de começar, certifique-se de que você tenha o ambiente de desenvolvimento do **Raspberry Pi Pico** configurado corretamente. Siga as instruções do [Raspberry Pi Pico SDK](https://www.raspberrypi.org/documentation/rp2040/getting-started/) para configurar o SDK e as ferramentas de compilação.
+Antes de começar, certifique-se de que você tenha o ambiente de desenvolvimento do **Raspberry Pi Pico** configurado corretamente. Siga as instruções do [Raspberry Pi Pico SDK](https://www.raspberrypi.org/documentation/rp2040/getting-started/) para configurar o SDK e as ferramentas de compilação. Para visualição do projeto no simulador também é importante configurar o simuldor WOKWI no VS code, conforme as instruções no link [WOKWI para VS code](https://docs.wokwi.com/pt-BR/vscode/getting-started).
 
 ## Compilação e Upload
 
