@@ -52,6 +52,7 @@ bool repeating_timer_callback(struct repeating_timer *t)
 {
     //Atualiza o led para o próximo estado
     next_state();
+    printf("Mudou o estado\n");
     return true;
 }
 uint8_t actual_state()
